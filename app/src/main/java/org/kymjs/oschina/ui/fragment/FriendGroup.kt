@@ -1,5 +1,6 @@
 package org.kymjs.oschina.ui.fragment
 
+import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
@@ -44,6 +45,10 @@ public class FriendGroup : BaseMainFragment() {
         })
         recyclerView?.setLayoutManager(LinearLayoutManager(outsideAty))
         recyclerView?.setItemAnimator(DefaultItemAnimator())
+
+        val itemDecoration: RecyclerView.ItemDecoration = DividerItemDecoration();
+        recyclerView?.addItemDecoration(itemDecoration);
+
         val myAdapter = FriendGroupAdapter()
         recyclerView?.setAdapter(myAdapter)
     }
@@ -51,5 +56,15 @@ public class FriendGroup : BaseMainFragment() {
     override fun onResume() {
         super.onResume()
         setTitle("好友动态")
+    }
+
+    /**
+     * set RecyclerView divider height 20px
+     */
+    inner class DividerItemDecoration : RecyclerView.ItemDecoration() {
+        override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+            super.getItemOffsets(outRect, view, parent, state);
+            outRect.set(0, 0, 0, 20);//每个item的底部偏移
+        }
     }
 }

@@ -25,11 +25,12 @@ public class FriendGroupAdapter extends RecyclerView.Adapter<FriendGroupAdapter.
 
     @Override
     public void onBindViewHolder(VH holder, int position) {
-        holder.tv_content.setText("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        holder.tv_content.setText("android觉得很赞android觉得很赞android觉得很赞android觉得很赞");
         holder.tv_name.setText(AppConfig.INSTANCE$.getUser().getName());
         holder.tv_time.setText("09:18");
         kjb.display(holder.img_head, AppConfig.INSTANCE$.getUser().getPortrait());
         kjb.display(holder.image, "http://kymjs.com/image/logo.png");
+        holder.tv_like.setText("android觉得很赞");
     }
 
     @Override
@@ -41,6 +42,7 @@ public class FriendGroupAdapter extends RecyclerView.Adapter<FriendGroupAdapter.
         public TextView tv_name;
         public TextView tv_time;
         public TextView tv_content;
+        public TextView tv_like;
         public ImageView img_head;
         public ImageView image;
 
@@ -49,6 +51,7 @@ public class FriendGroupAdapter extends RecyclerView.Adapter<FriendGroupAdapter.
             tv_name = (TextView) itemView.findViewById(R.id.item_friendgroup_tv_name);
             tv_time = (TextView) itemView.findViewById(R.id.item_friendgroup_tv_time);
             tv_content = (TextView) itemView.findViewById(R.id.item_friendgroup_tv_content);
+            tv_like = (TextView) itemView.findViewById(R.id.item_friendgroup_tv_likepeople);
             img_head = (ImageView) itemView.findViewById(R.id.item_friendgroup_img_head);
             image = (ImageView) itemView.findViewById(R.id.item_friendgroup_image);
         }
