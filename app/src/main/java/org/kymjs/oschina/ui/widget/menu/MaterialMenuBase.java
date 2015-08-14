@@ -1,14 +1,10 @@
-package org.kymjs.oschina.ui.widget;
+package org.kymjs.oschina.ui.widget.menu;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
-
-import static org.kymjs.oschina.ui.widget.MaterialMenuDrawable.DEFAULT_PRESSED_DURATION;
-import static org.kymjs.oschina.ui.widget.MaterialMenuDrawable.DEFAULT_SCALE;
-import static org.kymjs.oschina.ui.widget.MaterialMenuDrawable.DEFAULT_TRANSFORM_DURATION;
 
 /**
  * Base class for ActionBar implementations of {@link MaterialMenuDrawable}
@@ -24,17 +20,17 @@ public abstract class MaterialMenuBase implements MaterialMenu {
     private MaterialMenuDrawable drawable;
 
     public MaterialMenuBase(Activity activity, int color, MaterialMenuDrawable.Stroke stroke) {
-        this(activity, color, stroke, DEFAULT_TRANSFORM_DURATION, DEFAULT_PRESSED_DURATION);
+        this(activity, color, stroke, MaterialMenuDrawable.DEFAULT_TRANSFORM_DURATION, MaterialMenuDrawable.DEFAULT_PRESSED_DURATION);
     }
 
     public MaterialMenuBase(Activity activity, int color, MaterialMenuDrawable.Stroke stroke, int
             transformDuration) {
-        this(activity, color, stroke, transformDuration, DEFAULT_PRESSED_DURATION);
+        this(activity, color, stroke, transformDuration, MaterialMenuDrawable.DEFAULT_PRESSED_DURATION);
     }
 
     public MaterialMenuBase(Activity activity, int color, MaterialMenuDrawable.Stroke stroke, int
 			transformDuration, int pressedDuration) {
-        drawable = new MaterialMenuDrawable(activity, color, stroke, DEFAULT_SCALE, 
+        drawable = new MaterialMenuDrawable(activity, color, stroke, MaterialMenuDrawable.DEFAULT_SCALE, 
 				transformDuration, pressedDuration);
         setActionBarSettings(activity);
         if (providesActionBar()) {
@@ -135,7 +131,7 @@ public abstract class MaterialMenuBase implements MaterialMenu {
 
     /**
      * Overwrites behaviour of pressed state circle animation even when using
-     * {@link #animatePressedState(org.kymjs.oschina.ui.widget.MaterialMenuDrawable.IconState)}
+     * {@link #animatePressedState(MaterialMenuDrawable.IconState)}
      *
      * @param neverDrawTouch true to never draw pressed state circle animation
      */

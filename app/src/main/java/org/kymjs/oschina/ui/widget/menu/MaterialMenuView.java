@@ -1,4 +1,4 @@
-package org.kymjs.oschina.ui.widget;
+package org.kymjs.oschina.ui.widget.menu;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Interpolator;
 
-import static org.kymjs.oschina.ui.widget.MaterialMenuDrawable.IconState;
+import static org.kymjs.oschina.ui.widget.menu.MaterialMenuDrawable.IconState;
 
 /**
  * A basic View wrapper of {@link MaterialMenuDrawable}. Used for custom view

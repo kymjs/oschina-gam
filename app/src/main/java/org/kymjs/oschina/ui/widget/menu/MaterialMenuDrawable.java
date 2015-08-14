@@ -1,4 +1,4 @@
-package org.kymjs.oschina.ui.widget;
+package org.kymjs.oschina.ui.widget.menu;
 
 import android.content.Context;
 import android.content.res.Resources;

@@ -1,4 +1,4 @@
-package org.kymjs.oschina.ui.widget;
+package org.kymjs.oschina.ui.widget.menu;
 
 import android.annotation.TargetApi;
 import android.app.ActionBar;
@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import org.kymjs.oschina.R;
 
-import static org.kymjs.oschina.ui.widget.MaterialMenuDrawable.Stroke;
+import static org.kymjs.oschina.ui.widget.menu.MaterialMenuDrawable.Stroke;
 
 /**
  * A helper class for implementing {@link MaterialMenuDrawable} as an

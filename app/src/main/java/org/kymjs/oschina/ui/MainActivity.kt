@@ -18,8 +18,8 @@ import org.kymjs.oschina.R
 import org.kymjs.oschina.ui.fragment.FriendGroup
 import org.kymjs.oschina.ui.fragment.MainSlidMenu
 import org.kymjs.oschina.ui.fragment.Topic
-import org.kymjs.oschina.ui.widget.MaterialMenuDrawable
-import org.kymjs.oschina.ui.widget.MaterialMenuIcon
+import org.kymjs.oschina.ui.widget.menu.MaterialMenuDrawable
+import org.kymjs.oschina.ui.widget.menu.MaterialMenuIcon
 import org.kymjs.oschina.utils.KJAnimations
 import rx.functions.Action1
 

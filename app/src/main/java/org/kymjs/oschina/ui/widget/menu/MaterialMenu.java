@@ -1,8 +1,6 @@
-package org.kymjs.oschina.ui.widget;
+package org.kymjs.oschina.ui.widget.menu;
 
 import android.view.animation.Interpolator;
-
-import org.kymjs.oschina.ui.widget.MaterialMenuDrawable.IconState;
 
 /**
  * API for interaction with {@link MaterialMenuDrawable}
@@ -13,28 +11,28 @@ public interface MaterialMenu {
      *
      * @param state new icon state
      */
-    public void setState(IconState state);
+    public void setState(MaterialMenuDrawable.IconState state);
 
     /**
      * Return current icon state
      *
      * @return icon state
      */
-    public IconState getState();
+    public MaterialMenuDrawable.IconState getState();
 
     /**
      * Animate icon to given state.
      *
      * @param state new icon state
      */
-    public void animateState(IconState state);
+    public void animateState(MaterialMenuDrawable.IconState state);
 
     /**
      * Animate icon to given state and draw touch circle
      *
      * @param state new icon state
      */
-    public void animatePressedState(IconState state);
+    public void animatePressedState(MaterialMenuDrawable.IconState state);
 
     /**
      * Set color of icon
@@ -73,7 +71,7 @@ public interface MaterialMenu {
 
     /**
      * Manually set a transformation value for an
-     * {@link org.kymjs.oschina.ui.widget.MaterialMenuDrawable.AnimationState}
+     * {@link MaterialMenuDrawable.AnimationState}
      *
      * @param animationState state to set value in
      * @param value          between
