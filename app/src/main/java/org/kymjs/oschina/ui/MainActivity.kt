@@ -39,8 +39,8 @@ public class MainActivity : KJActivity() {
 
     private var materialMenuIcon: MaterialMenuIcon? = null
 
-    private var content1: SupportFragment = FriendGroup()
-    private var content2: SupportFragment = Topic()
+    private var content1: SupportFragment = Topic()
+    private var content2: SupportFragment = FriendGroup()
     private var menuFragment: MainSlidMenu? = null
 
     private var titleBarHeight: Float = 0f

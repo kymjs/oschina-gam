@@ -8,9 +8,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import org.kymjs.kjframe.http.HttpCallBack
 import org.kymjs.kjframe.ui.BindView
 import org.kymjs.oschina.R
 import org.kymjs.oschina.adapter.FriendGroupAdapter
+import org.kymjs.oschina.api.OSChinaApi
 import org.kymjs.oschina.ui.widget.CircleRefreshLayout
 
 /**
@@ -35,6 +37,8 @@ public class FriendGroup : BaseMainFragment() {
 
     override fun initWidget(parentView: View?) {
         super.initWidget(parentView)
+        setContentData(0)
+
         refreshLayout?.setOnRefreshListener(object : CircleRefreshLayout.OnCircleRefreshListener {
             override fun refreshing() {
                 refreshLayout.finishRefreshing();
@@ -49,8 +53,8 @@ public class FriendGroup : BaseMainFragment() {
         val itemDecoration: RecyclerView.ItemDecoration = DividerItemDecoration();
         recyclerView?.addItemDecoration(itemDecoration);
 
-        val myAdapter = FriendGroupAdapter()
-        recyclerView?.setAdapter(myAdapter)
+        val adapter = FriendGroupAdapter()
+        recyclerView?.setAdapter(adapter)
     }
 
     override fun onResume() {
@@ -66,5 +70,13 @@ public class FriendGroup : BaseMainFragment() {
             super.getItemOffsets(outRect, view, parent, state);
             outRect.set(0, 0, 0, 20);//每个item的底部偏移
         }
+    }
+
+    fun setContentData(page: Int) {
+        OSChinaApi.getFriendGroupList(page, object : HttpCallBack() {
+            override fun onSuccess(t: String) {
+                
+            }
+        })
     }
 }

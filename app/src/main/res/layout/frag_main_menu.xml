@@ -58,6 +58,20 @@
 
             <ImageView
                 style="@style/MenuItemImageViewStyle"
+                android:background="@drawable/icon_explore_topic"
+                android:contentDescription="@null"/>
+
+            <TextView
+                style="@style/MenuItemTextViewStyle"
+                android:text="话题圈子"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_item_tag2"
+            style="@style/MenuItemLayoutStyle">
+
+            <ImageView
+                style="@style/MenuItemImageViewStyle"
                 android:background="@drawable/icon_explore_friends"
                 android:contentDescription="@null"/>
 
@@ -67,7 +81,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/menu_item_tag2"
+            android:id="@+id/menu_item_tag3"
             style="@style/MenuItemLayoutStyle">
 
             <ImageView
@@ -77,7 +91,35 @@
 
             <TextView
                 style="@style/MenuItemTextViewStyle"
-                android:text="话题圈子"/>
+                android:text="Android控件库"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_item_tag4"
+            style="@style/MenuItemLayoutStyle">
+
+            <ImageView
+                style="@style/MenuItemImageViewStyle"
+                android:background="@drawable/icon_explore_topic"
+                android:contentDescription="@null"/>
+
+            <TextView
+                style="@style/MenuItemTextViewStyle"
+                android:text="技术博客"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_item_tag5"
+            style="@style/MenuItemLayoutStyle">
+
+            <ImageView
+                style="@style/MenuItemImageViewStyle"
+                android:background="@drawable/icon_explore_topic"
+                android:contentDescription="@null"/>
+
+            <TextView
+                style="@style/MenuItemTextViewStyle"
+                android:text="新闻资讯"/>
         </LinearLayout>
     </LinearLayout>
 
